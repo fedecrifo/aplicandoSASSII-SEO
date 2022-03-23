@@ -1,0 +1,13 @@
+.widget-2{
+    grid-area: widget-2;
+    background: transparent;
+    color: black;
+    min-height: 100px;
+    padding: 50px;
+    transition: transform .2s;
+    margin: 0 auto;
+    &:hover {
+            transform: scale(1.1);
+        }
+    
+}

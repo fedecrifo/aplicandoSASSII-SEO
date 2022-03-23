@@ -1,0 +1,21 @@
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    .logo{
+        width: 150px;
+        height: 160px;
+    }
+    h2{
+        font-size: medium;
+    }
+    li{
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+    }
+
+}

@@ -1,0 +1,13 @@
+.contenido{
+    grid-area: contenido;
+    position: relative;
+    overflow: hidden;  
+    text-align: center;
+    padding: 50px;
+    transition: transform .2s;
+    margin: 0 auto;
+    &:hover {
+            transform: scale(1.1);
+    }
+    
+}

@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #fff9f9;
+  background: -webkit-gradient(linear, left top, right top, from(#fff9f9), color-stop(0%, #c6c6c6), color-stop(99%, #f0e3e3));
+  background: linear-gradient(90deg, #fff9f9 0%, #c6c6c6 0%, #f0e3e3 99%);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (auto)[4];
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas: "header header header" "contenido contenido sidebar" "widget-1 widget-2 sidebar" "footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .contenido,
+.contenedor .header,
+.contenedor .sidebar,
+.contenedor .footer {
+  background: transparent;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.header {
+  background-color: aqua;
+  background: transparent;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header .logo {
+  width: 150px;
+  height: 160px;
+}
+
+.header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header nav ul li {
+  font-family: "Noto Sans JP", sans-serif;
+  color: black;
+  margin: 0 16px;
+  font-weight: 600;
+  text-decoration: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  padding: 8px 16px;
+  border-radius: 90px;
+  list-style-type: none;
+}
+
+.header nav ul li:hover {
+  background-color: white;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+}
+
+.contenido {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: contenido;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.sidebar {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  background: transparent;
+  min-height: 100px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 3;
+  grid-area: sidebar;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.widget-1 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: widget-1;
+  background: transparent;
+  color: black;
+  min-height: 100px;
+}
+
+.widget-2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: widget-2;
+  background: transparent;
+  color: black;
+  min-height: 100px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.footer .logo {
+  width: 150px;
+  height: 160px;
+}
+
+.footer ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.zoom {
+  padding: 50px;
+  background-color: green;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+        grid-template-areas: "header header header" "contenido contenido contenido" "sidebar sidebar sidebar" "widget-1 widget-1 widget-1 " "widget-2 widget-2 widget-2 " "footer footer footer";
+  }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contenidodiv {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+  }
+  .iframeresponsivo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=grid.css.map */

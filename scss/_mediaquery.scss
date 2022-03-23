@@ -1,0 +1,38 @@
+@media screen and (max-width: 768px){
+    .contenedor{
+        grid-template-areas: "header header header"
+                            "contenido contenido contenido"
+                            "sidebar sidebar sidebar"
+                            "widget-1 widget-1 widget-1 "
+                            "widget-2 widget-2 widget-2 "
+                            "footer footer footer";
+                            margin: auto;
+}
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contenidodiv{
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+    .iframeresponsivo{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+}

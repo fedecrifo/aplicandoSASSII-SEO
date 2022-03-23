@@ -1,0 +1,15 @@
+.sidebar{
+    grid-column: 3 / 4;
+    background: transparent;
+    min-height: 100px;
+    grid-area: sidebar;
+    font-family: $font;
+    padding: 50px;
+    transition: transform .2s;
+    margin: 0 auto;
+    &:hover {
+            transform: scale(1.1);
+        }
+    
+
+}
