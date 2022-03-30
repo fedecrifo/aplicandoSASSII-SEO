@@ -7,7 +7,7 @@
                             "widget-2 widget-2 widget-2 "
                             "footer footer footer";
                             margin: auto;
-}
+    }
     .header{
         display: flex;
         flex-direction: column;
@@ -19,7 +19,8 @@
     }
     .footer{
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        width: auto;
     }
     .contenidodiv{
         position: relative;

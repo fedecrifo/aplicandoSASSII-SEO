@@ -2,14 +2,36 @@
     color: black;
     width: 100%;
     max-width: 1000px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: 100px;
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "header header header"
                         "contenido contenido sidebar"
                         "widget-1 widget-2 sidebar"
                         "footer footer footer";                   
-}  
+ 
+    .header{
+        @include cajas ($bgcaja1)
+    }
+    .contenido{
+        @include cajas ($bgcaja2)
+    }
+    .sidebar{
+        @include cajas ($bgcaja3)
+    }
+    .widget-1{
+        @include cajas ($bgcaja4)
+    }
+    .widget-2{
+        @include cajas ($bgcaja5)
+    }
+    .footer{
+        @include cajas ($bgcaja6)
+    }
+}
 
+   

@@ -1,7 +1,47 @@
 
-$textcolor: #7f00f5;  
 $cardscolor: linear-gradient(90deg, rgba(3,233,88,1) 0%, rgba(0,209,247,1) 0%, rgba(130,201,149,1) 99%);
 $font: 'Noto Sans JP', sans-serif;
+
+$encabezados:(
+    xl:blue,
+    l:red,
+    m:green,
+    link:black,
+);
+$xl: map-get($encabezados, xl);
+$l: map-get($encabezados, l);
+$m: map-get($encabezados, m);
+$link: map-get($encabezados, link);
+$p: map-get($encabezados, p);
+
+h1{
+    color: $xl;
+}
+h2{
+    color: $l;
+}
+h3{
+    color: $m;
+}
+a{
+    color: $link;
+}
+
+
+$bgcaja1:rgb(151, 126, 126);
+$bgcaja2:rgb(148, 125, 83);
+$bgcaja3:rgb(108, 161, 108);
+$bgcaja4:pink;
+$bgcaja5:lightblue;
+$bgcaja6:rgb(142, 202, 0);
+
+@mixin cajas($bgcaja) {
+    background-color: $bgcaja;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px black;
+    
+}
+
 
 
 
